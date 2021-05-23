@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+ 
+    <title>手机webApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/sty.css" rel="stylesheet"/>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="search-pnl">
+        <div class="white-pnl">
+            <img src="img/s.png" class="search-icon"></img>
+            <input class="ipt" placeholder="请输入..."></input>
+            <img src="img/ac.png" id="camera" class="search-icon" style="position: absolute;margin-left: 15px;" onclick="require_hide(this.id)"></img>
+        </div>
+    </div>
+    <div class="more-pnl">
+        <div class="module-pnl" id="op1" onclick="require_hide(this.id)"><img src="img/m1.png" class="mod-icon"></img><div>功能1</div></div>
+        <div class="module-pnl" id="op2" onclick="require_hide(this.id)"><img src="img/m2.png" class="mod-icon"></img><div>功能2</div></div>
+        <div class="module-pnl" id="op3" onclick="require_hide(this.id)"><img src="img/m1.png" class="mod-icon"></img><div>功能3</div></div>
+        <div class="module-pnl" id="op4" onclick="require_hide(this.id)"><img src="img/m2.png" class="mod-icon"></img><div>功能4</div></div>
+        <div class="module-pnl" id="op5" onclick="require_hide(this.id)"><img src="img/m1.png" class="mod-icon"></img><div>功能5</div></div>
+        <div class="module-pnl" id="op6" onclick="require_hide(this.id)"><img src="img/m2.png" class="mod-icon"></img><div>功能6</div></div>
+        <div class="module-pnl" id="op7" onclick="require_hide(this.id)"><img src="img/m1.png" class="mod-icon"></img><div>功能7</div></div>
+        <div class="module-pnl" id="op8" onclick="require_hide(this.id)"><img src="img/m2.png" class="mod-icon"></img><div>功能8</div></div>
+    </div>
+</body>
+<script>
+    function require_hide(op_name){
+        var cloud_url = "https://40d706fe693544a5b2f66664dcb62e38.apig.cn-south-1.huaweicloudapis.com/process";
+        var user_name = "Admin";
+        var data = {
+            "user_name" : user_name,
+            "option_name" : op_name,
+            "if_hide" : 1
+        }
+        console.log(data);
+        var result={};
+        $.ajax({
+            type : "post",
+            async : false, //同步请求
+            url : cloud_url,
+            data : JSON.stringify(data),
+            timeout: 1000,
+            success:function(msg){
+                result = msg;
+            },
+            error: function() {
+                    // alert("失败，请稍后再试！");
+            }
+        });
+        console.log(result);
+        if (result['ok'] == 'yes'){
+            document.getElementById(op_name).className = "hide";
+            alert("操作成功！");
+        }else{
+            alert("操作失败！");
+        }
+    }
+</script>
+</html>

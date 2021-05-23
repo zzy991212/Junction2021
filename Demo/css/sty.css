@@ -1,0 +1,63 @@
+.search-pnl{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 80px;
+    background-color: rgb(207, 7, 7);
+}
+
+.white-pnl{
+    margin: 15px 40px 10px;
+    height:45px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.search-icon{
+    position: relative;
+    display: inline;
+    width:20px;
+    height: 20px;
+    background-size:cover;
+    margin-left: 20px;
+    margin-top :12px;
+    z-index: 1;
+    float:left;
+}
+
+
+.ipt{
+    margin-left: 10px;
+    margin-top:12px;
+    width:90%;
+}
+
+.hide{
+    display: none;
+}
+
+.more-pnl{
+    position:absolute;
+    background-color: rgb(212, 212, 212);
+    margin-top:100px;
+    height: 200px;
+    left: 350px;
+    right:430px;    
+}
+
+.module-pnl{
+    display: inline-block;
+    margin:15px 35px 15px 35px;
+    text-align: center;
+}
+
+.mod-icon{
+    height: 50px;
+    width: 50px;
+}
+
+.module-pnl > div{
+    font-size: 13px;
+    
+}
