@@ -1,3 +1,4 @@
+```
 │ 产品介绍书.pdf 
 
 │ 项目演示.pptx 
@@ -6,7 +7,7 @@
 
 └─用户端App原型图 
 
-| 	   │ index.html 
+| 	 │ index.html 
 
 |	 ├─extra 
 
@@ -24,7 +25,7 @@
 
 │	├─mb-workspace 
 
-│ 	 │ 	└─images 
+│ 	│ 	└─images 
 
 │	└─uploads4 
 
@@ -39,6 +40,7 @@
    ├─css 
 
    └─img
+```
 
 `项目演示.pptx` 为项目演示的材料，配有视频讲解，视频长度约 4min ，对本项目做出了 较为系统的讲解。 
 
